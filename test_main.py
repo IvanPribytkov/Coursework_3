@@ -2,8 +2,9 @@ import json
 import pytest
 from main import mask_card_number, mask_account_number
 
+
 # Путь к файлу с данными для тестирования
-DATA_FILE = 'operations.json'
+DATA_FILE = 'tests/operations.json'
 
 # Подготовка данных для тестирования
 @pytest.fixture
