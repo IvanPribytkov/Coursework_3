@@ -15,12 +15,10 @@ def sample_operations():
 # Тест маскирования номера карты
 def test_mask_card_number():
     assert mask_card_number('2842878893689012') == '284287******9012'
-    #assert mask_card_number('9876543210987654') == '987654******7654'
 
 # Тест маскирования номера счета
 def test_mask_account_number():
     assert mask_account_number('90424923579946435907') == '**5907'
-    #assert mask_account_number('9876543210') == '**3210'
 
 # Тест функции main для обработки операций
 def test_main(sample_operations, capsys):
