@@ -14,6 +14,7 @@ def mask_card_number(card_number):
     last_part = card_number[-4:]
     # Маскируем остальные цифры
     masked_number = f"{first_part}******{last_part}"
+    masked_number = ' '.join(masked_number[i * 4:(i + 1) * 4] for i in range(4))
     return masked_number
 
 def mask_account_number(account_number):
