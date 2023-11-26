@@ -45,7 +45,7 @@ def main():
     for operation in sorted_operations:
         # Извлекаем только дату из строки даты и времени
         date = operation['date'][:10]
-        date = f"{date[:4]}.{date[5:7]}.{date[-2:]}"
+        date = f"{date[-2:]}.{date[5:7]}.{date[:4]}"
         # Извлекаем описание операции
         description = operation['description']
         # Маскируем номер карты или счета, если они присутствуют
