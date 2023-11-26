@@ -14,7 +14,7 @@ def sample_operations():
 
 # Тест маскирования номера карты
 def test_mask_card_number():
-    assert mask_card_number('2842878893689012') == '284287******9012'
+    assert mask_card_number('2842878893689012') == '2842 87** **** 9012'
 
 # Тест маскирования номера счета
 def test_mask_account_number():
@@ -31,9 +31,9 @@ def test_main(sample_operations, capsys):
 
     # Проверяем, что вывод содержит ожидаемые строки
     captured = capsys.readouterr()
-    assert 'Дата: 2019-12-07' in captured.out
+    assert 'Дата: 2019.12.07' in captured.out
     assert 'Описание: Перевод организации' in captured.out
-    assert 'Откуда: 284287******9012 -> Куда: **3655' in captured.out
+    assert 'Откуда: 2842 87** **** 9012 -> Куда: **3655' in captured.out
     assert 'Сумма: 48150.39 USD' in captured.out
 
 if __name__ == "__main__":
