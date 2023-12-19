@@ -4,7 +4,7 @@ from main import mask_card_number, mask_account_number
 
 
 # Путь к файлу с данными для тестирования
-DATA_FILE = 'tests/operations.json'
+DATA_FILE = 'operations.json'
 
 # Подготовка данных для тестирования
 @pytest.fixture
@@ -31,7 +31,7 @@ def test_main(sample_operations, capsys):
 
     # Проверяем, что вывод содержит ожидаемые строки
     captured = capsys.readouterr()
-    assert 'Дата: 2019.12.07' in captured.out
+    assert 'Дата: 07.12.2019' in captured.out
     assert 'Описание: Перевод организации' in captured.out
     assert 'Откуда: 2842 87** **** 9012 -> Куда: **3655' in captured.out
     assert 'Сумма: 48150.39 USD' in captured.out
